@@ -13,9 +13,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # ID,KEY的配置信息
 INFO_CONFIG = {
-    'ID': '15777797',
-    'API_KEY': 'xkQmQk08d7pTP56LqXhqpUbm',
-    'SECRET_KEY': 'bzgSQwTy6WTkXczLlYPfOwu2OQZQ8CEg'
+    'ID': '256720',
+    'API_KEY': '81ZkfnF8hcoSYKEh8P0o3GW0',
+    'SECRET_KEY': 'RacBHzrndMFhR2yF1m8EkZpbQxHdG1xc'
 }
 
 # URL配置

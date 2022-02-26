@@ -49,6 +49,9 @@ pip3 install requests
 
 pip3 install xlutils
 
+# 新增截图所需包
+pip3 install pyautogui
+
 ```
 
 ## 运行演示

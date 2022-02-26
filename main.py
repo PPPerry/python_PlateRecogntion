@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 __author__ = 'jinmu333'
 
+from math import inf
 import threading
 import time
 import tkinter as tk
@@ -20,6 +21,9 @@ import tkinter.messagebox
 import requests
 from time import sleep
 from hyperlpr import *
+import pyautogui
+
+
 
 
 class ThreadWithReturnValue(Thread):
@@ -137,19 +141,18 @@ class Surface(ttk.Frame):
         #最小化主窗口
         win.state('icon')
         sleep(0.2)
-        filename = "tmp/cut.gif"
-        im =ImageGrab.grab()
-        im.save(filename)
-        im.close()
-        #显示全屏幕截图
+        myscreen = pyautogui.screenshot()
+        filename = "tmp/cut.png"
+        myscreen.save(filename)
         w = screencut.MyCapture(win, filename)
         self.cut_ctrl.wait_window(w.top)
-
+        
         #截图结束，恢复主窗口，并删除临时的全屏幕截图文件
         win.state('normal')
-        os.remove(filename)
         self.cameraflag = 0
+
         self.pic_path = "tmp/cut.png"
+
         self.clean()
         self.pic_source = "来自截图"
         self.pic(self.pic_path)
